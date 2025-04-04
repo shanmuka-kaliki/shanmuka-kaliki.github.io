@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="John Doe's Blog - Web Development Articles and Tutorials"
+        />
+        <meta
+            name="keywords"
+            content="web development blog, JavaScript tutorials, React guides, programming articles"
+        />
+        <meta name="author" content="John Doe" />
+        <meta name="robots" content="index, follow" />
+        <meta property="og:title" content="John Doe's Web Development Blog" />
+        <meta
+            property="og:description"
+            content="Articles and tutorials about web development, JavaScript, React and more"
+        />
+        <meta property="og:image" content="[YOUR_OG_IMAGE_URL]" />
+        <meta property="og:url" content="[YOUR_WEBSITE_URL]" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <link rel="canonical" href="https://joe@example.com" />
+        <title>
+            John Doe's Web Development Blog | JavaScript, React & More
+        </title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        />
+        <style>
+            :root {
+                --primary: #f8f9fa;
+                --text: #343a40;
+                --bg: #ffffff;
+                --link: #0366d6;
+            }
+
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family:
+                    -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
+                    Arial, sans-serif;
+            }
+
+            body {
+                background: var(--bg);
+                color: var(--text);
+                line-height: 1.5;
+                max-width: 700px;
+                margin: 0 auto;
+                padding: 2rem;
+            }
+
+            .navbar {
+                position: fixed;
+                top: 20px;
+                left: 50%;
+                transform: translateX(-50%);
+                background: rgba(255, 255, 255, 0.15);
+                padding: 0.8rem 1.5rem;
+                border-radius: 50px;
+                backdrop-filter: blur(20px);
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+                z-index: 1000;
+                display: flex;
+                align-items: center;
+                gap: 1.5rem;
+                border: 1px solid rgba(255, 255, 255, 0.3);
+            }
+
+            .navbar a {
+                color: black;
+                text-decoration: none;
+                font-size: 1.1rem;
+                transition: color 0.3s ease;
+                position: relative;
+            }
+
+            .navbar a:hover {
+                color: var(--link);
+            }
+
+            .navbar a::after {
+                content: attr(data-tooltip);
+                position: absolute;
+                bottom: -30px;
+                left: 50%;
+                transform: translateX(-50%);
+                background: rgba(0, 0, 0, 0.8);
+                color: white;
+                padding: 4px 8px;
+                border-radius: 4px;
+                font-size: 0.8rem;
+                white-space: nowrap;
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.3s ease;
+            }
+
+            .navbar a:hover::after {
+                opacity: 1;
+                visibility: visible;
+            }
+
+            .message-btn {
+                background: var(--link);
+                color: white;
+                padding: 0.5rem 1rem;
+                border-radius: 20px;
+                border: none;
+                cursor: pointer;
+                font-size: 0.9rem;
+                transition: background 0.3s ease;
+            }
+
+            .message-btn:hover {
+                background: #0256b4;
+            }
+
+            header {
+                padding: 4rem 0 2rem 0;
+            }
+
+            h1 {
+                font-size: 2rem;
+                color: var(--text);
+                margin-bottom: 1rem;
+                font-weight: 600;
+            }
+
+            .bio {
+                font-size: 1rem;
+                margin: 0;
+                color: var(--text);
+            }
+
+            h2 {
+                font-size: 1.5rem;
+                color: var(--text);
+                margin: 2rem 0 1rem 0;
+                font-weight: 600;
+            }
+
+            .blogs {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .blog-card {
+                border: 1px solid #e1e4e8;
+                padding: 1.5rem;
+                border-radius: 8px;
+                transition: all 0.3s ease;
+                background: white;
+                position: relative;
+                overflow: hidden;
+            }
+
+            .blog-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+                border-color: var(--link);
+            }
+
+            .blog-card h3 {
+                font-size: 1.1rem;
+                margin-bottom: 0.75rem;
+                font-weight: 600;
+                color: var(--text);
+            }
+
+            .blog-card p {
+                font-size: 0.9rem;
+                color: #586069;
+                margin-bottom: 1rem;
+            }
+
+            .project-links {
+                display: flex;
+                gap: 1rem;
+                margin-top: 1rem;
+            }
+
+            .project-links a {
+                color: var(--link);
+                text-decoration: none;
+                font-size: 0.875rem;
+                display: flex;
+                align-items: center;
+                gap: 0.25rem;
+            }
+
+            .project-links a:hover {
+                text-decoration: underline;
+            }
+
+            .contact {
+                margin-top: 2rem;
+            }
+
+            .contact a {
+                color: var(--link);
+                text-decoration: none;
+                margin-right: 1rem;
+                font-size: 0.875rem;
+            }
+
+            .contact a:hover {
+                text-decoration: underline;
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="navbar" aria-label="Main navigation">
+            <a href="/" data-tooltip="Home" aria-label="Go to Home page"
+                ><i class="fas fa-home"></i
+            ></a>
+            <a href="/blogs" data-tooltip="Blogs" aria-label="Go to Blogs page"
+                ><i class="fas fa-blog"></i
+            ></a>
+            <a
+                href="/contact"
+                data-tooltip="Contact"
+                aria-label="Go to Contact page"
+                ><i class="fas fa-address-book"></i
+            ></a>
+            <a
+                href="/message"
+                class="message-btn"
+                aria-label="Go to Message page"
+            >
+                Message Me
+            </a>
+        </nav>
+
+        <main class="container">
+            <header id="home">
+                <h1>John's Blog</h1>
+                <p class="bio">
+                    Sharing insights and experiences about web development,
+                    programming best practices, and technical tutorials.
+                </p>
+            </header>
+
+            <section id="blogs" aria-labelledby="blogs-heading">
+                <h2 id="blogs-heading">Latest Posts</h2>
+                <div class="blogs">
+                    <article class="blog-card">
+                        <h3>Understanding Modern JavaScript</h3>
+                        <p>
+                            A deep dive into modern JavaScript features and best
+                            practices for writing clean, maintainable code.
+                        </p>
+                        <div class="project-links">
+                            <a href="#" aria-label="Read full article"
+                                ><i class="fas fa-external-link-alt"></i> Read
+                                More</a
+                            >
+                        </div>
+                    </article>
+                    <article class="blog-card">
+                        <h3>React Performance Optimization</h3>
+                        <p>
+                            Tips and techniques for optimizing React
+                            applications for better performance and user
+                            experience.
+                        </p>
+                        <div class="project-links">
+                            <a href="#" aria-label="Read full article"
+                                ><i class="fas fa-external-link-alt"></i> Read
+                                More</a
+                            >
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <footer id="contact" class="contact">
+                <a href="mailto:contact@example.com" aria-label="Send email"
+                    >Email</a
+                >
+                <a
+                    href="https://github.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Visit GitHub profile"
+                    >GitHub</a
+                >
+                <a
+                    href="https://linkedin.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Visit LinkedIn profile"
+                    >LinkedIn</a
+                >
+            </footer>
+        </main>
+    </body>
+</html>
