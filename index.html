@@ -5,503 +5,400 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
             name="description"
-            content="John Doe - Full Stack Web Developer specializing in React, Node.js and cloud architecture with 5+ years of experience building enterprise applications"
+            content="I am a frontend developer specializing in modern web technologies like React, Vue, and JavaScript."
         />
         <meta
             name="keywords"
-            content="web developer, full stack developer, React developer, Node.js developer, JavaScript developer, AWS, cloud architecture"
+            content="Frontend Developer, React Developer, JavaScript, UI/UX, Web Development"
         />
-        <meta name="author" content="John Doe" />
+        <meta name="author" content="Shanmuka Phani" />
         <meta name="robots" content="index, follow" />
         <meta
             property="og:title"
-            content="John Doe - Full Stack Web Developer Portfolio"
+            content="Shanmuka Kaliki - Frontend Developer Portfolio"
         />
         <meta
             property="og:description"
-            content="Full Stack Web Developer specializing in React, Node.js and cloud architecture with 5+ years of experience"
+            content="I am a frontend developer specializing in modern web technologies like React, Vue, and JavaScript."
         />
         <meta property="og:image" content="[YOUR_OG_IMAGE_URL]" />
-        <meta property="og:url" content="[YOUR_WEBSITE_URL]" />
+        <meta property="og:url" content="https://shanmuka.kaliki.co" />
         <meta name="twitter:card" content="summary_large_image" />
-        <link rel="canonical" href="https://joe@example.com" />
-        <title>
-            John Doe - Full Stack Web Developer Portfolio | React, Node.js, AWS
-            Expert
-        </title>
+        <link rel="canonical" href="https://shanmuka.kaliki.co" />
+        <title>Shanmuka Kalki | Frontend Developer Portfolio</title>
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
         />
-        <style>
-            :root {
-                --primary: #f8f9fa;
-                --text: #343a40;
-                --bg: #ffffff;
-                --link: #0366d6;
-            }
-
-            * {
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-                font-family:
-                    -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
-                    Arial, sans-serif;
-            }
-
-            body {
-                background: var(--bg);
-                color: var(--text);
-                line-height: 1.5;
-                max-width: 700px;
-                margin: 0 auto;
-                padding: 2rem;
-            }
-
-            .navbar {
-                position: fixed;
-                top: 20px;
-                left: 50%;
-                transform: translateX(-50%);
-                background: rgba(255, 255, 255, 0.15);
-                padding: 0.8rem 1.5rem;
-                border-radius: 50px;
-                backdrop-filter: blur(20px);
-                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-                z-index: 1000;
-                display: flex;
-                align-items: center;
-                gap: 1.5rem;
-                border: 1px solid rgba(255, 255, 255, 0.3);
-            }
-
-            .navbar a {
-                color: black;
-                text-decoration: none;
-                font-size: 1.1rem;
-                transition: color 0.3s ease;
-                position: relative;
-            }
-
-            .navbar a:hover {
-                color: var(--link);
-            }
-
-            .navbar a::after {
-                content: attr(data-tooltip);
-                position: absolute;
-                bottom: -30px;
-                left: 50%;
-                transform: translateX(-50%);
-                background: rgba(0, 0, 0, 0.8);
-                color: white;
-                padding: 4px 8px;
-                border-radius: 4px;
-                font-size: 0.8rem;
-                white-space: nowrap;
-                opacity: 0;
-                visibility: hidden;
-                transition: all 0.3s ease;
-            }
-
-            .navbar a:hover::after {
-                opacity: 1;
-                visibility: visible;
-            }
-
-            .message-btn {
-                background: var(--link);
-                color: white;
-                padding: 0.5rem 1rem;
-                border-radius: 20px;
-                border: none;
-                cursor: pointer;
-                font-size: 0.9rem;
-                transition: background 0.3s ease;
-            }
-
-            .message-btn:hover {
-                background: #0256b4;
-            }
-
-            header {
-                padding: 4rem 0 2rem 0;
-            }
-            .profile-pic-container {
-                width: 84px;
-                height: 84px;
-                border-radius: 50%;
-                overflow: hidden;
-            }
-            .profile-pic-container img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
-
-            h1 {
-                font-size: 2rem;
-                color: var(--text);
-                margin-bottom: 1rem;
-                font-weight: 600;
-            }
-
-            .bio {
-                font-size: 1rem;
-                margin: 0;
-                color: var(--text);
-            }
-
-            h2 {
-                font-size: 1.5rem;
-                color: var(--text);
-                margin: 2rem 0 1rem 0;
-                font-weight: 600;
-            }
-
-            .resume-item {
-                margin-bottom: 1rem;
-            }
-
-            .resume-item h3 {
-                font-size: 1rem;
-                color: var(--text);
-                margin-bottom: 0.25rem;
-                font-weight: 600;
-            }
-
-            .resume-item .date {
-                color: #6a737d;
-                font-size: 0.875rem;
-            }
-
-            .resume-item p {
-                color: var(--text);
-                font-size: 0.875rem;
-            }
-
-            .skills {
-                display: flex;
-                flex-wrap: wrap;
-                gap: 0.5rem;
-            }
-
-            .skill-tag {
-                background: var(--primary);
-                color: var(--text);
-                padding: 0.25rem 0.75rem;
-                border-radius: 2rem;
-                font-size: 0.875rem;
-            }
-
-            .projects,
-            .blogs {
-                display: flex;
-                flex-direction: column;
-                gap: 1rem;
-            }
-
-            .project-card,
-            .blog-card {
-                border: 1px solid #e1e4e8;
-                padding: 1.5rem;
-                border-radius: 8px;
-                transition: all 0.3s ease;
-                background: white;
-                position: relative;
-                overflow: hidden;
-            }
-
-            .project-card:hover,
-            .blog-card:hover {
-                transform: translateY(-5px);
-                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-                border-color: var(--link);
-            }
-
-            .project-card h3,
-            .blog-card h3 {
-                font-size: 1.1rem;
-                margin-bottom: 0.75rem;
-                font-weight: 600;
-                color: var(--text);
-            }
-
-            .project-card p,
-            .blog-card p {
-                font-size: 0.9rem;
-                color: #586069;
-                margin-bottom: 1rem;
-            }
-
-            .project-technologies {
-                display: flex;
-                flex-wrap: wrap;
-                gap: 0.5rem;
-                margin-top: 1rem;
-            }
-
-            .tech-pill {
-                background: #f1f8ff;
-                color: var(--link);
-                padding: 0.25rem 0.75rem;
-                border-radius: 2rem;
-                font-size: 0.75rem;
-                font-weight: 500;
-                transition: all 0.2s ease;
-            }
-
-            .tech-pill:hover {
-                background: var(--link);
-                color: white;
-            }
-
-            .project-links {
-                display: flex;
-                gap: 1rem;
-                margin-top: 1rem;
-            }
-
-            .project-links a {
-                color: var(--link);
-                text-decoration: none;
-                font-size: 0.875rem;
-                display: flex;
-                align-items: center;
-                gap: 0.25rem;
-            }
-
-            .project-links a:hover {
-                text-decoration: underline;
-            }
-
-            .contact {
-                margin-top: 2rem;
-            }
-
-            .contact a {
-                color: var(--link);
-                text-decoration: none;
-                margin-right: 1rem;
-                font-size: 0.875rem;
-            }
-
-            .contact a:hover {
-                text-decoration: underline;
-            }
-        </style>
+        <script src="https://cdn.tailwindcss.com"></script>
     </head>
-    <body>
-        <nav class="navbar" aria-label="Main navigation">
+    <body class="bg-white text-gray-800 max-w-screen-md mx-auto p-8 font-sans">
+        <nav
+            class="fixed top-5 left-1/2 -translate-x-1/2 bg-white/15 backdrop-blur-lg px-6 py-3 rounded-full shadow-md z-50 flex items-center gap-6 border border-white/30"
+            aria-label="Main navigation"
+        >
             <a
                 href="index.html"
                 data-tooltip="Home"
                 aria-label="Go to Home section"
+                class="text-black hover:text-blue-600 text-lg relative transition-colors duration-300"
                 ><i class="fas fa-home"></i
             ></a>
             <a
                 href="projects.html"
                 data-tooltip="Projects"
                 aria-label="Go to Projects section"
+                class="text-black hover:text-blue-600 text-lg relative transition-colors duration-300"
                 ><i class="fas fa-project-diagram"></i
             ></a>
             <a
                 href="blogs.html"
                 data-tooltip="Blogs"
                 aria-label="Go to Blogs section"
+                class="text-black hover:text-blue-600 text-lg relative transition-colors duration-300"
                 ><i class="fas fa-blog"></i
             ></a>
             <a
                 href="contact.html"
                 data-tooltip="Contact"
                 aria-label="Go to Contact section"
+                class="text-black hover:text-blue-600 text-lg relative transition-colors duration-300"
                 ><i class="fas fa-address-book"></i
             ></a>
-            <button class="message-btn" aria-label="Send message">
+            <button
+                class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-full text-sm transition-colors duration-300"
+                aria-label="Send message"
+            >
                 Message Me
             </button>
         </nav>
 
         <main class="container">
-            <header id="home">
-                <div class="profile-pic-container">
-                    <img src="assets/images/phani.avif" alt="Profile Picture" />
+            <header id="home" class="pt-16 pb-8">
+                <div class="w-[84px] h-[84px] rounded-full overflow-hidden">
+                    <img
+                        src="assets/images/phani.avif"
+                        alt="Profile Picture"
+                        class="w-full h-full object-cover"
+                    />
                 </div>
-                <h1>John Doe</h1>
-                <p class="bio">
+                <h1 class="text-3xl font-semibold text-gray-800 mb-4">
+                    John Doe
+                </h1>
+                <p class="text-base text-gray-800 mb-4">
                     A passionate web developer with 5+ years of experience
                     crafting beautiful and functional digital experiences.
                     Specialized in full-stack development and cloud
                     architecture.
                 </p>
-                <div class="skills" aria-label="Technical skills">
-                    <span class="skill-tag">JavaScript</span>
-                    <span class="skill-tag">React</span>
-                    <span class="skill-tag">Node.js</span>
-                    <span class="skill-tag">Python</span>
-                    <span class="skill-tag">AWS</span>
-                    <span class="skill-tag">Docker</span>
+                <div class="flex flex-wrap gap-2" aria-label="Technical skills">
+                    <span
+                        class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm"
+                        >JavaScript</span
+                    >
+                    <span
+                        class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm"
+                        >React</span
+                    >
+                    <span
+                        class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm"
+                        >Node.js</span
+                    >
+                    <span
+                        class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm"
+                        >Python</span
+                    >
+                    <span
+                        class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm"
+                        >AWS</span
+                    >
+                    <span
+                        class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm"
+                        >Docker</span
+                    >
                 </div>
             </header>
 
             <section
                 id="experience"
-                class="resume-section"
                 aria-labelledby="experience-heading"
+                class="my-8"
             >
-                <h2 id="experience-heading">Experience</h2>
-                <div class="resume-item">
-                    <h3>Senior Web Developer - Tech Corp</h3>
-                    <div class="date" aria-label="Duration">2020 - Present</div>
-                    <p>
+                <h2
+                    id="experience-heading"
+                    class="text-2xl font-semibold text-gray-800 mb-4"
+                >
+                    Experience
+                </h2>
+                <div class="mb-4">
+                    <h3 class="text-base font-semibold text-gray-800 mb-1">
+                        Senior Web Developer - Tech Corp
+                    </h3>
+                    <div class="text-sm text-gray-500" aria-label="Duration">
+                        2020 - Present
+                    </div>
+                    <p class="text-sm text-gray-800">
                         Led development of enterprise-scale web applications,
                         managing a team of 5 developers.
                     </p>
                 </div>
-                <div class="resume-item">
-                    <h3>Full Stack Developer - StartUp Inc</h3>
-                    <div class="date" aria-label="Duration">2018 - 2020</div>
-                    <p>
+                <div class="mb-4">
+                    <h3 class="text-base font-semibold text-gray-800 mb-1">
+                        Full Stack Developer - StartUp Inc
+                    </h3>
+                    <div class="text-sm text-gray-500" aria-label="Duration">
+                        2018 - 2020
+                    </div>
+                    <p class="text-sm text-gray-800">
                         Developed and maintained multiple client projects using
                         React and Node.js.
                     </p>
                 </div>
             </section>
 
-            <section id="projects" aria-labelledby="projects-heading">
-                <h2 id="projects-heading">Projects</h2>
-                <div class="projects">
-                    <article class="project-card">
-                        <h3>Project One</h3>
-                        <p>
+            <section
+                id="projects"
+                aria-labelledby="projects-heading"
+                class="my-8"
+            >
+                <h2
+                    id="projects-heading"
+                    class="text-2xl font-semibold text-gray-800 mb-4"
+                >
+                    Projects
+                </h2>
+                <div class="flex flex-col gap-4">
+                    <article
+                        class="border border-gray-200 p-6 rounded-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:border-blue-600 bg-white relative overflow-hidden"
+                    >
+                        <h3 class="text-lg font-semibold text-gray-800 mb-3">
+                            Project One
+                        </h3>
+                        <p class="text-sm text-gray-600 mb-4">
                             A minimalist e-commerce platform built with React
                             and Node.js. Features include real-time inventory
                             management and secure payment processing.
                         </p>
                         <div
-                            class="project-technologies"
+                            class="flex flex-wrap gap-2 mt-4"
                             aria-label="Technologies used"
                         >
-                            <span class="tech-pill">React</span>
-                            <span class="tech-pill">Node.js</span>
-                            <span class="tech-pill">MongoDB</span>
-                            <span class="tech-pill">Stripe</span>
+                            <span
+                                class="bg-blue-50 text-blue-600 px-3 py-1 rounded-full text-xs font-medium transition-colors duration-200 hover:bg-blue-600 hover:text-white"
+                                >React</span
+                            >
+                            <span
+                                class="bg-blue-50 text-blue-600 px-3 py-1 rounded-full text-xs font-medium transition-colors duration-200 hover:bg-blue-600 hover:text-white"
+                                >Node.js</span
+                            >
+                            <span
+                                class="bg-blue-50 text-blue-600 px-3 py-1 rounded-full text-xs font-medium transition-colors duration-200 hover:bg-blue-600 hover:text-white"
+                                >MongoDB</span
+                            >
+                            <span
+                                class="bg-blue-50 text-blue-600 px-3 py-1 rounded-full text-xs font-medium transition-colors duration-200 hover:bg-blue-600 hover:text-white"
+                                >Stripe</span
+                            >
                         </div>
-                        <div class="project-links">
-                            <a href="#" aria-label="View source code on GitHub"
-                                ><i class="fab fa-github"></i> View Code</a
+                        <div class="flex gap-4 mt-4">
+                            <a
+                                href="#"
+                                aria-label="View source code on GitHub"
+                                class="text-blue-600 text-sm flex items-center gap-1 hover:underline"
                             >
-                            <a href="#" aria-label="View live demo"
-                                ><i class="fas fa-external-link-alt"></i> Live
-                                Demo</a
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                            <a
+                                href="#"
+                                aria-label="View live demo"
+                                class="text-blue-600 text-sm flex items-center gap-1 hover:underline"
                             >
+                                <i class="fas fa-external-link-alt"></i> Live
+                                Demo
+                            </a>
                         </div>
                     </article>
-                    <article class="project-card">
-                        <h3>Project Two</h3>
-                        <p>
+                    <article
+                        class="border border-gray-200 p-6 rounded-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:border-blue-600 bg-white relative overflow-hidden"
+                    >
+                        <h3 class="text-lg font-semibold text-gray-800 mb-3">
+                            Project Two
+                        </h3>
+                        <p class="text-sm text-gray-600 mb-4">
                             Interactive data visualization dashboard using D3.js
                             with real-time data updates and responsive design.
                         </p>
                         <div
-                            class="project-technologies"
+                            class="flex flex-wrap gap-2 mt-4"
                             aria-label="Technologies used"
                         >
-                            <span class="tech-pill">D3.js</span>
-                            <span class="tech-pill">JavaScript</span>
-                            <span class="tech-pill">SVG</span>
-                            <span class="tech-pill">WebSocket</span>
+                            <span
+                                class="bg-blue-50 text-blue-600 px-3 py-1 rounded-full text-xs font-medium transition-colors duration-200 hover:bg-blue-600 hover:text-white"
+                                >D3.js</span
+                            >
+                            <span
+                                class="bg-blue-50 text-blue-600 px-3 py-1 rounded-full text-xs font-medium transition-colors duration-200 hover:bg-blue-600 hover:text-white"
+                                >JavaScript</span
+                            >
+                            <span
+                                class="bg-blue-50 text-blue-600 px-3 py-1 rounded-full text-xs font-medium transition-colors duration-200 hover:bg-blue-600 hover:text-white"
+                                >SVG</span
+                            >
+                            <span
+                                class="bg-blue-50 text-blue-600 px-3 py-1 rounded-full text-xs font-medium transition-colors duration-200 hover:bg-blue-600 hover:text-white"
+                                >WebSocket</span
+                            >
                         </div>
-                        <div class="project-links">
-                            <a href="#" aria-label="View source code on GitHub"
-                                ><i class="fab fa-github"></i> View Code</a
+                        <div class="flex gap-4 mt-4">
+                            <a
+                                href="#"
+                                aria-label="View source code on GitHub"
+                                class="text-blue-600 text-sm flex items-center gap-1 hover:underline"
                             >
-                            <a href="#" aria-label="View live demo"
-                                ><i class="fas fa-external-link-alt"></i> Live
-                                Demo</a
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                            <a
+                                href="#"
+                                aria-label="View live demo"
+                                class="text-blue-600 text-sm flex items-center gap-1 hover:underline"
                             >
+                                <i class="fas fa-external-link-alt"></i> Live
+                                Demo
+                            </a>
                         </div>
                     </article>
-                    <article class="project-card">
-                        <h3>Project Three</h3>
-                        <p>
+                    <article
+                        class="border border-gray-200 p-6 rounded-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:border-blue-600 bg-white relative overflow-hidden"
+                    >
+                        <h3 class="text-lg font-semibold text-gray-800 mb-3">
+                            Project Three
+                        </h3>
+                        <p class="text-sm text-gray-600 mb-4">
                             Mobile-first responsive portfolio template with dark
                             mode and customizable themes.
                         </p>
                         <div
-                            class="project-technologies"
+                            class="flex flex-wrap gap-2 mt-4"
                             aria-label="Technologies used"
                         >
-                            <span class="tech-pill">HTML5</span>
-                            <span class="tech-pill">CSS3</span>
-                            <span class="tech-pill">JavaScript</span>
-                            <span class="tech-pill">SASS</span>
+                            <span
+                                class="bg-blue-50 text-blue-600 px-3 py-1 rounded-full text-xs font-medium transition-colors duration-200 hover:bg-blue-600 hover:text-white"
+                                >HTML5</span
+                            >
+                            <span
+                                class="bg-blue-50 text-blue-600 px-3 py-1 rounded-full text-xs font-medium transition-colors duration-200 hover:bg-blue-600 hover:text-white"
+                                >CSS3</span
+                            >
+                            <span
+                                class="bg-blue-50 text-blue-600 px-3 py-1 rounded-full text-xs font-medium transition-colors duration-200 hover:bg-blue-600 hover:text-white"
+                                >JavaScript</span
+                            >
+                            <span
+                                class="bg-blue-50 text-blue-600 px-3 py-1 rounded-full text-xs font-medium transition-colors duration-200 hover:bg-blue-600 hover:text-white"
+                                >SASS</span
+                            >
                         </div>
-                        <div class="project-links">
-                            <a href="#" aria-label="View source code on GitHub"
-                                ><i class="fab fa-github"></i> View Code</a
+                        <div class="flex gap-4 mt-4">
+                            <a
+                                href="#"
+                                aria-label="View source code on GitHub"
+                                class="text-blue-600 text-sm flex items-center gap-1 hover:underline"
                             >
-                            <a href="#" aria-label="View live demo"
-                                ><i class="fas fa-external-link-alt"></i> Live
-                                Demo</a
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                            <a
+                                href="#"
+                                aria-label="View live demo"
+                                class="text-blue-600 text-sm flex items-center gap-1 hover:underline"
                             >
+                                <i class="fas fa-external-link-alt"></i> Live
+                                Demo
+                            </a>
                         </div>
                     </article>
                 </div>
             </section>
 
-            <section id="blogs" aria-labelledby="blogs-heading">
-                <h2 id="blogs-heading">Blogs</h2>
-                <div class="blogs">
-                    <article class="blog-card">
-                        <h3>Understanding Modern JavaScript</h3>
-                        <p>
+            <section id="blogs" aria-labelledby="blogs-heading" class="my-8">
+                <h2
+                    id="blogs-heading"
+                    class="text-2xl font-semibold text-gray-800 mb-4"
+                >
+                    Blogs
+                </h2>
+                <div class="flex flex-col gap-4">
+                    <article
+                        class="border border-gray-200 p-6 rounded-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:border-blue-600 bg-white relative overflow-hidden"
+                    >
+                        <h3 class="text-lg font-semibold text-gray-800 mb-3">
+                            Understanding Modern JavaScript
+                        </h3>
+                        <p class="text-sm text-gray-600 mb-4">
                             A deep dive into modern JavaScript features and best
                             practices for writing clean, maintainable code.
                         </p>
-                        <div class="project-links">
-                            <a href="#" aria-label="Read full article"
-                                ><i class="fas fa-external-link-alt"></i> Read
-                                More</a
+                        <div class="flex gap-4 mt-4">
+                            <a
+                                href="#"
+                                aria-label="Read full article"
+                                class="text-blue-600 text-sm flex items-center gap-1 hover:underline"
                             >
+                                <i class="fas fa-external-link-alt"></i> Read
+                                More
+                            </a>
                         </div>
                     </article>
-                    <article class="blog-card">
-                        <h3>React Performance Optimization</h3>
-                        <p>
+                    <article
+                        class="border border-gray-200 p-6 rounded-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:border-blue-600 bg-white relative overflow-hidden"
+                    >
+                        <h3 class="text-lg font-semibold text-gray-800 mb-3">
+                            React Performance Optimization
+                        </h3>
+                        <p class="text-sm text-gray-600 mb-4">
                             Tips and techniques for optimizing React
                             applications for better performance and user
                             experience.
                         </p>
-                        <div class="project-links">
-                            <a href="#" aria-label="Read full article"
-                                ><i class="fas fa-external-link-alt"></i> Read
-                                More</a
+                        <div class="flex gap-4 mt-4">
+                            <a
+                                href="#"
+                                aria-label="Read full article"
+                                class="text-blue-600 text-sm flex items-center gap-1 hover:underline"
                             >
+                                <i class="fas fa-external-link-alt"></i> Read
+                                More
+                            </a>
                         </div>
                     </article>
                 </div>
             </section>
 
-            <footer id="contact" class="contact">
-                <a href="mailto:contact@example.com" aria-label="Send email"
-                    >Email</a
+            <footer id="contact" class="mt-8">
+                <a
+                    href="mailto:contact@example.com"
+                    aria-label="Send email"
+                    class="text-blue-600 mr-4 text-sm hover:underline"
                 >
+                    Email
+                </a>
                 <a
                     href="https://github.com"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Visit GitHub profile"
-                    >GitHub</a
+                    class="text-blue-600 mr-4 text-sm hover:underline"
                 >
+                    GitHub
+                </a>
                 <a
                     href="https://linkedin.com"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Visit LinkedIn profile"
-                    >LinkedIn</a
+                    class="text-blue-600 mr-4 text-sm hover:underline"
                 >
+                    LinkedIn
+                </a>
             </footer>
         </main>
     </body>
