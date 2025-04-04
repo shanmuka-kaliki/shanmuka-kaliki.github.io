@@ -37,34 +37,9 @@
         <link rel="canonical" href="https://phani.kaliki.co" />
         <title>Phani Kalki | Frontend Developer</title>
         <script src="https://cdn.tailwindcss.com"></script>
-        <style>
-            /* Tooltip styles */
-            [data-tooltip]::before {
-                content: attr(data-tooltip);
-                position: absolute;
-                bottom: -25px;
-                left: 50%;
-                transform: translateX(-50%);
-                padding: 4px 8px;
-                line-height: 1;
-                background-color: #666;
-                color: white;
-                font-size: 12px;
-                border-radius: 36px;
-                white-space: nowrap;
-                opacity: 0;
-                visibility: hidden;
-                transition:
-                    opacity 0.3s,
-                    visibility 0.3s;
-                z-index: 10;
-            }
-
-            [data-tooltip]:hover::before {
-                opacity: 1;
-                visibility: visible;
-            }
-        </style>
+        <link rel="stylesheet" href="static/css/darkMode.css" />
+        <link rel="stylesheet" href="static/css/navTooltip.css" />
+        <script src="static/js/darkMode.js"></script>
     </head>
     <body class="bg-white text-gray-800 max-w-screen-md mx-auto p-8 font-sans">
         <nav
@@ -159,6 +134,59 @@
                     />
                 </svg>
             </a>
+            <div class="flex items-center ml-1">
+                <button
+                    id="darkModeToggle"
+                    class="p-2 rounded-full hover:bg-gray-100 transition-colors duration-300 cursor-pointer"
+                    onclick="toggleDarkMode()"
+                    aria-label="Toggle dark mode"
+                >
+                    <!-- Sun icon for dark mode -->
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="text-gray-600 dark-mode-sun hidden"
+                    >
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line
+                            x1="18.36"
+                            y1="18.36"
+                            x2="19.78"
+                            y2="19.78"
+                        ></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+
+                    <!-- Moon icon for light mode -->
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="text-gray-600 dark-mode-moon"
+                    >
+                        <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9z"></path>
+                    </svg>
+                </button>
+            </div>
             <button
                 class="bg-gray-600 hover:bg-gray-800 text-white px-4 py-2 rounded-full text-sm transition-colors duration-300"
                 aria-label="Send message"

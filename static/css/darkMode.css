@@ -1,0 +1,112 @@
+/* Dark mode styles */
+
+* {
+    transition:
+        background-color 0.3s linear,
+        color 0.3s linear;
+}
+.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-mode {
+    background-color: #121212 !important;
+}
+
+/* Navigation */
+.dark-mode nav {
+    background-color: rgba(30, 30, 30, 0.8);
+    backdrop-filter: blur(10px);
+    border-color: rgba(75, 85, 99, 0.3);
+}
+
+.dark-mode nav a {
+    color: #e0e0e0;
+}
+
+.dark-mode nav a:hover {
+    color: #60a5fa;
+}
+
+.dark-mode nav svg path {
+    fill: #e0e0e0;
+}
+
+.dark-mode nav .hover\:bg-gray-100:hover {
+    background-color: rgba(75, 85, 99, 0.2);
+}
+
+.dark-mode nav button.bg-gray-600 {
+    background-color: #60a5fa;
+}
+
+.dark-mode nav button.hover\:bg-gray-800:hover {
+    background-color: #3b82f6;
+}
+
+/* Text colors */
+.dark-mode .text-gray-800 {
+    color: #e0e0e0;
+}
+
+.dark-mode .text-gray-600,
+.dark-mode .text-gray-500 {
+    color: #a0a0a0;
+}
+
+/* Skill tags */
+.dark-mode .bg-gray-100 {
+    background-color: #2a2a2a;
+    color: #e0e0e0;
+}
+
+/* Project cards */
+.dark-mode article {
+    background-color: #1e1e1e;
+    border-color: #333;
+}
+
+.dark-mode article:hover {
+    border-color: #60a5fa;
+    box-shadow:
+        0 4px 6px -1px rgba(0, 0, 0, 0.1),
+        0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* Technology tags */
+.dark-mode .bg-blue-50 {
+    background-color: rgba(59, 130, 246, 0.15);
+}
+
+.dark-mode .text-blue-600 {
+    color: #60a5fa;
+}
+
+.dark-mode .bg-blue-50.hover\:bg-blue-600:hover {
+    background-color: #3b82f6;
+}
+
+/* Links */
+.dark-mode a.text-blue-600 {
+    color: #60a5fa;
+}
+
+.dark-mode a.text-blue-600:hover {
+    color: #93c5fd;
+}
+
+/* Toggle switch */
+.dark-mode span.bg-gray-300 {
+    background-color: #60a5fa;
+}
+
+.dark-mode span:before {
+    transform: translateX(20px);
+}
+
+/* Tooltips */
+.dark-mode [data-tooltip]::before {
+    background-color: #4b5563;
+    color: #e0e0e0;
+}
