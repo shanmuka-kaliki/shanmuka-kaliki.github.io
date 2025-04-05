@@ -22,7 +22,7 @@ body.dark-mode {
 }
 
 .dark-mode nav a {
-    color: #e0e0e0;
+    color: #a0a0a0;
 }
 
 .dark-mode nav a:hover {
@@ -30,7 +30,7 @@ body.dark-mode {
 }
 
 .dark-mode nav svg path {
-    fill: #e0e0e0;
+    fill: #a0a0a0 !important;
 }
 
 .dark-mode nav .hover\:bg-gray-100:hover {
