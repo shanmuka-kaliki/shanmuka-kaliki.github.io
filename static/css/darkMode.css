@@ -27,7 +27,7 @@ body.dark-mode {
 
 .dark-mode #darkModeToggle {
     background-color: rgba(30, 30, 30, 0.8);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(5px);
     border-color: rgba(75, 85, 99, 0.3);
 }
 
@@ -41,6 +41,12 @@ body.dark-mode {
 
 .dark-mode nav .hover\:bg-gray-100:hover {
     background-color: rgba(75, 85, 99, 0.2);
+}
+
+.dark-mode .skills-container span {
+    background-color: rgba(30, 30, 30, 0.4);
+    backdrop-filter: blur(5px);
+    border-color: rgba(75, 85, 99, 0.3);
 }
 
 .dark-mode nav button.bg-gray-600 {
@@ -69,8 +75,9 @@ body.dark-mode {
 
 /* Project cards */
 .dark-mode article {
-    background-color: #1e1e1e;
-    border-color: #333;
+    background-color: rgba(30, 30, 30, 0.4);
+    backdrop-filter: blur(5px);
+    border-color: rgba(75, 85, 99, 0.3);
 }
 
 .dark-mode article:hover {
